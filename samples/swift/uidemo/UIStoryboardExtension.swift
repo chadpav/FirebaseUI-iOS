@@ -14,11 +14,10 @@
 //  limitations under the License.
 //
 
-// Uncomment when using frawemorks
-//@import FirebaseDatabaseUI;
-#import <FirebaseUI/FirebaseTableViewDataSource.h>
+import UIKit
 
-@interface MessageDataSource : FirebaseTableViewDataSource
-
-@end
-
+extension UIStoryboard {
+  static func instantiateViewController(storyboard: String, identifier: String) -> UIViewController {
+    return UIStoryboard(name: storyboard, bundle: nil).instantiateViewControllerWithIdentifier(identifier)
+  }
+}
